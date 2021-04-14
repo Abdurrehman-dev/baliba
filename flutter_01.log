@@ -1,0 +1,77 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter build apk
+
+## exception
+
+FileSystemException: FileSystemException: Cannot copy file to 'F:\flutter_apps\Office_work\ecommerceapp\build\app\outputs\flutter-apk\app.apk', path = 'F:\flutter_apps\Office_work\ecommerceapp\build\app\outputs\flutter-apk\app-release.apk' (OS Error: Cannot create a file when that file already exists.
+, errno = 183)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:635:7)
+#1      _File.copySync (dart:io/file_impl.dart:340:5)
+#2      ForwardingFile.copySync (package:file/src/forwarding/forwarding_file.dart:30:50)
+#3      buildGradleApp (package:flutter_tools/src/android/gradle.dart:498:11)
+#4      _rootRunUnary (dart:async/zone.dart:1198:47)
+#5      _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#6      _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#7      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#8      Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#9      Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#10     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:40:15)
+#11     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:311:13)
+#12     _DefaultProcessUtils.stream (package:flutter_tools/src/base/process.dart)
+#13     _rootRunUnary (dart:async/zone.dart:1198:47)
+#14     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#15     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#16     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#17     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#18     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#19     Future._asyncCompleteWithValue.<anonymous closure> (dart:async/future_impl.dart:567:7)
+#20     _rootRun (dart:async/zone.dart:1190:13)
+#21     _CustomZone.run (dart:async/zone.dart:1093:19)
+#22     _CustomZone.runGuarded (dart:async/zone.dart:997:7)
+#23     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1037:23)
+#24     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#25     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#26     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#27     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 1.22.2, on Microsoft Windows [Version 10.0.18363.1256], locale en-US)
+    • Flutter version 1.22.2 at C:\flutter
+    • Framework revision 84f3d28555 (3 months ago), 2020-10-15 16:26:19 -0700
+    • Engine revision b8752bbfff
+    • Dart version 2.10.2
+
+[!] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
+    • Android SDK at C:\Users\Abdur\AppData\Local\Android\Sdk\
+    • Platform android-30, build-tools 30.0.3
+    • ANDROID_HOME = C:\Users\Abdur\AppData\Local\Android\Sdk\
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_212-release-1586-b04)
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for more details.
+
+[!] Android Studio (version 4.1.0)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+    • Java version OpenJDK Runtime Environment (build 1.8.0_212-release-1586-b04)
+
+[✓] VS Code (version 1.52.0)
+    • VS Code at C:\Users\Abdur\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.17.0
+
+[✓] Connected device (1 available)
+    • SM N920C (mobile) • 853353434b575541 • android-arm64 • Android 7.0 (API 24)
+
+! Doctor found issues in 2 categories.
+```
